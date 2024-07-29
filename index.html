@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <title>Sistema de Login Utilizando LocalStorage</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#home">
+                    <img src="./assets/images/logo.png" alt="LOGO"/>
+                </a>
+            </div>
+            <div id="menu__header">
+                <ul>
+                    <li id="login__button" onclick="closeRegister();"><a href="#login">Login</a></li>
+                    <li id="regiter__button" onclick="closeLogin();"><a href="#register">Cadastro</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="description">
+            <div id="content">
+                <h1>Sistema de Login utilizando LocalStorage</h1>
+                &#10026; CRUD simples utilizando apenas JavaScript.<br>
+                &#10026; Usuário e senha armazenados no LocalStorage.<br>
+                &#10026; Painel de controle (usuário, senha e opção de excluir a conta).<br>
+            </div>
+        </section>
+        <section id="login" class="animate__animated">
+            <div id="login__content">
+                <div class="header__form">
+                    <span><a href="" id="hide__login">cancelar</a></span>
+                    <span>Não é registrado? <a href="#" onClick="showRegister(); closeLogin();">Crie uma conta!</a></span>
+                </div>
+                <form action="panel.html" type="post" id="form__login" autocomplete="off">
+                    <fieldset>
+                        <legend>Login</legend>
+                            <label id="label__email" class="label__email animate__animated">Informe seu e-mail:</label>
+                            <input 
+                                type="email" 
+                                name="email__login" 
+                                id="email__login" 
+                                class="animate__animated" 
+                                placeholder="Informe seu e-mail..." 
+                                onfocus="this.value=''; showLabelMail();" 
+                                onfocusOut="hideLabelMail();" 
+                            />
+                            <label id="label__pass" class="label__pass animate__animated">Informe sua senha:</label>
+                            <input 
+                                type="password" 
+                                name="password__login" 
+                                id="password__login" 
+                                class="animate__animated" 
+                                placeholder="Informe sua senha..." 
+                                onfocus="this.value=''; showLabelPass();" 
+                                onfocusOut="hideLabelPass();" 
+                            />
+                        <button id="submit__login" class="animate__animated">Entrar</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="register" class="animate__animated">
+            <div id="register__content">
+                <div class="header__form">
+                    <span><a href="" id="hide__register">cancelar</a></span>
+                    <span>Já é registrado? <a href="#" onClick="showLogin(); closeRegister();">Faça Login!</a></span>
+                </div>
+                <form id="form__register" autocomplete="off">
+                    <fieldset>
+                        <legend>Cadastro</legend>
+                            <label id="label__email__r" class="label__email animate__animated">Informe seu e-mail:</label>
+                            <input 
+                                type="email" 
+                                name="email__register" 
+                                id="email__register" 
+                                placeholder="Informe seu e-mail..." 
+                                required 
+                                onfocus="this.value=''; showLabelMailR();" 
+                                onfocusOut="hideLabelMailR();" 
+                            />
+                            <label id="label__pass__r" class="label__pass animate__animated">Informe sua senha:</label>
+                            <input 
+                                type="password" 
+                                name="password__register" 
+                                id="password__register" 
+                                placeholder="Informe sua senha..." 
+                                required 
+                                onfocus="this.value=''; showLabelPassR();" 
+                                onfocusOut="hideLabelPassR();" 
+                            />
+                            <label id="label__pass__rc" class="label__pass animate__animated">Confirme sua senha:</label>
+                            <input 
+                                type="password" 
+                                name="password__confirm" 
+                                id="password__confirm" 
+                                placeholder="Confirme sua senha..." 
+                                required 
+                                onfocus="this.value=''; showLabelPassRc();" 
+                                onfocusOut="hideLabelPassRc();" 
+                            />
+                            <button id="submit__register" class="animate__animated">Cadastrar</button>
+                        </fieldset>
+                    </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="copy">
+            &#169; 2023 Sistema de Login | Desenvolvido por: 
+            <a href="https://ticoesteves.hgpage.com.br/" 
+            target="_blank">Tico Esteves</a><br>
+            Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+    <script src="./assets/js/register.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>

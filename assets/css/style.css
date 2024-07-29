@@ -1,0 +1,451 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --maxWidthContent: 1200px;
+    --minWidthContent: 420px;
+    --primaryColor: #6181AE;
+    --secondaryColor: #22252F;
+    --bgColor: #D9ECFF;
+    --brightColor: #fff;
+    --darkColor: #000;
+    --linkColor: #50FA7B;
+    --transparentColor: rgb(0 0 0 / .3);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+body {
+    background-color: var(--bgColor);
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    position: fixed;
+    padding: 1rem;
+    color: var(--brightColor);
+    background-color: var(--secondaryColor);
+    box-shadow: 0px 5px 40px var(--darkColor); 
+    -webkit-box-shadow: 0px 5px 40px var(--darkColor);
+    -moz-box-shadow: 0px 5px 40px var(--darkColor);
+    z-index: 2;
+}
+
+nav {
+    width: 100%;
+    max-width: var(--maxWidthContent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+#menu__header ul {
+    display: flex;
+}
+
+#menu__header a {
+    margin: 1rem;
+    padding: 0.7rem 2rem;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#menu__header a:hover {
+    color: var(--secondaryColor);
+    background-color: var(--linkColor);
+}
+
+#content {
+    width: 100%;
+}
+
+.left,
+.right {
+    width: 48%;
+}
+
+.right {
+    text-align: right;
+}
+
+#login,
+#register {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -200%;
+    color: var(--brightColor);
+    background-color: var(--transparentColor);
+    z-index: 4;
+}
+
+#login a,
+#register a {
+    color: var(--linkColor);
+}
+
+#login a:hover,
+#register a:hover {
+    color: var(--brightColor);
+}
+
+#description {
+    width: 100%;
+    max-width: var(--maxWidthContent);
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 8rem 1rem 1rem;
+}
+
+#login__content,
+#register__content {
+    width: 30%;
+    height: 100vh;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--brightColor);
+    background-color: var(--secondaryColor);
+    text-align: center;
+    box-shadow: 0px 5px 40px var(--darkColor); 
+    -webkit-box-shadow: 0px 5px 40px var(--darkColor);
+    -moz-box-shadow: 0px 5px 40px var(--darkColor);
+    z-index: 3;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    color: var(--brightColor);
+    background-color: var(--secondaryColor);
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0px 5px 40px var(--darkColor); 
+    -webkit-box-shadow: 0px 5px 40px var(--darkColor);
+    -moz-box-shadow: 0px 5px 40px var(--darkColor);
+    z-index: 3;
+}
+
+#copy a {
+    color: var(--primaryColor);
+}
+
+#copy a:hover {
+    color: var(--brightColor);
+}
+
+form {
+    width: 100%;
+}
+
+#form__register fieldset {
+    height: 400px;
+    padding: 10px 15px;
+    font-size: 25px;
+    border: 3px inset var(--primaryColor);
+    border-radius: 10px;
+}
+
+#form__login fieldset {
+    height: 360px;
+    padding: 10px 15px;
+    font-size: 25px;
+    border: 3px inset var(--primaryColor);
+    border-radius: 10px;
+}
+
+form legend {
+    padding: 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form input {
+    width: 100%;
+    margin: 0.5rem 0 1.5rem;
+    padding: 1.5rem 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+form input ::placeholder {
+    color: var(--primaryColor);
+}
+
+.label__email, .label__pass {
+    display: none;
+    position: relative;
+    top: 0px;
+    color: var(--brightColor);
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#email__login {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+#email__login::placeholder {
+    color: var(--primaryColor);
+}
+
+#password__login {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+#password__login::placeholder {
+    color: var(--primaryColor);
+}
+
+#email__register {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+#email__register::placeholder {
+    color: var(--primaryColor);
+}
+
+#password__register {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+#password__register::placeholder {
+    color: var(--primaryColor);
+}
+
+#password__confirm {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+#password__confirm::placeholder {
+    color: var(--primaryColor);
+}
+
+#submit__login {
+    width: 100%;
+    display: none;
+    padding: 15px 0;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#submit__login:hover {
+    color: var(--primaryColor);
+    background-color: var(--linkColor);
+}
+
+#submit__register {
+    width: 100%;
+    display: none;
+    padding: 15px 0;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#submit__register:hover {
+    color: var(--primaryColor);
+    background-color: var(--linkColor);
+}
+
+.header__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 20px;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+#panel__exit {
+    width: 100%;
+}
+
+.panel__button {
+    padding: 0.8rem 3rem;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.panel__button:hover {
+    color: var(--primaryColor);
+    background-color: var(--linkColor);
+}
+
+#show__user,
+#show__pass {
+    margin: 1rem 0;
+}
+
+#user__delete {
+    padding: 0.8rem 3rem;
+    color: var(--brightColor);
+    background-color: var(--primaryColor);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#user__delete:hover {
+    color: var(--primaryColor);
+    background-color: var(--linkColor);
+}
+
+@media(max-width: 1240px){
+
+    #login__content,
+    #register__content {
+        width: 40%;
+    }
+
+}
+
+@media(max-width: 940px){
+
+    #login__content,
+    #register__content {
+        width: 50%;
+    }
+
+}
+
+@media(max-width: 840px){
+
+    #login__content,
+    #register__content {
+        width: 70%;
+    }
+
+}
+
+@media(max-width: 720px){
+
+    #login__content,
+    #register__content {
+        width: 80%;
+    }
+
+}
+
+@media(max-width: 620px){
+
+    #login__content,
+    #register__content {
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 520px){
+
+    header {
+        height: 280px;
+		text-align: center;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #logo {
+        width: 100%;
+		margin-bottom: 2rem;
+        text-align: center;
+    }
+	
+    #menu__header ul {
+        display: block;
+        text-align: center;
+    }
+
+    #menu__header li {
+        margin: 3rem 0;
+    }
+
+    #description {
+		height: 100vh;
+        padding-top: 20rem;
+    }
+	
+	#description h1 {
+		text-align: center;
+	}
+	
+	#description .left,
+	#description .right {
+		width: 100%;
+		text-align: center;
+	}
+
+    #login__content,
+    #register__content {
+        width: 100%;
+    }
+
+}
